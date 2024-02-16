@@ -1,0 +1,49 @@
+
+.body-container{
+  min-height: 100vh;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.main-container{
+  margin: 0 auto;
+  display: grid;
+  padding: .5em;
+}
+
+.grid-container{
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  gap: .5em;
+}
+.grid-item{
+  background-color:lightgray;
+  border-radius: 5%;
+  text-align: center;
+}
+
+
+header{
+  text-align: center;
+  background-color: whitesmoke;
+  font-family: "Anta", sans-serif;
+}
+
+footer{
+  text-align: center;
+  background-color: whitesmoke;
+  font-family: "Anta", sans-serif;
+  margin-top: auto;
+}
+header p{
+  font-size: .9em;
+  letter-spacing: -.06em;
+}
+
+@media (min-width: 600px){
+  .main-container{
+    max-width: 800px;
+  }
+}

@@ -1,39 +1,22 @@
 import React from 'react'
 import './App.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+import Home from './pages/Home'
 
 function App() {
   
 
   return (
-    <div className='body-container'>
-      <Header />
-      <main className='main-container grid-container'>
-        <div className='grid-item'>
-            To   jest main container
-        </div>
-        <div className='grid-item'>
-            To   jest main container
-        </div>
-        <div className='grid-item'>
-            To   jest main container
-        </div>
-        <div className='grid-item'>
-            To   jest main container
-        </div>
-        <div className='grid-item'>
-            To   jest main container
-        </div>
-        <div className='grid-item'>
-            To   jest main container
-        </div>
-        <div className='grid-item'>
-            To   jest main container
-        </div>
-      </main>
+    <div className='main-wrapper'>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />} >
+            <Route index element={<Home />} />
+          </Route>
 
-      <Footer />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }

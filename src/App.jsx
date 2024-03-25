@@ -1,20 +1,23 @@
 import React from 'react'
-import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
+import Login from './pages/Login'
 
 function App() {
   
 
   return (
-    <div className='main-wrapper'>
+    <div className='page-container'>
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />} >
-            <Route index element={<Home />} />
-          </Route>
+            <Route path='/' element={<Home />} />
+            <Route path='home' element={<Home />} />
+            <Route path='login' element={<Login />} />
+            
 
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

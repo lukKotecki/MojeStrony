@@ -1,9 +1,10 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
-import Menu from './menu/Menu'
+import Menu from './Menu.jsx'
 import menu from '../assets/images/icon-menu.svg'
 import { nanoid } from 'nanoid'
 import { NavLink } from 'react-router-dom'
+import logo from '../assets/images/mojestrony-logo.png'
 
 export default function Header({...rest}){
 
@@ -13,7 +14,6 @@ export default function Header({...rest}){
     //const [activePage, setActivePage] = React.useState('home')
     // let location = useLocation()
     // console.log(location)
-
 
     //THIS CODE WORKS ONLY LOCAL AND DOSENT WORK ON NETLIFY
     // React.useEffect(()=>{
@@ -32,21 +32,17 @@ export default function Header({...rest}){
         e.target.id==='menu-btn' || e.target.id === 'menu-container' ? 
         setShowMenu(true) : setShowMenu(false) })
 
-
-
     const menuItems = [
         {name:'home'},
-        {name:'new'},
-        {name:'popular'},
-        {name:'trending'},
-        {name:'categories'}
+        {name:'polecane'},
+        {name:'login'}
     ]
 
     return (
         <header {...rest}>
-            <div>MojeStrony.pl</div>
+            <div className='logo'><NavLink to='/'><img src={logo}/></NavLink></div>
             <div className='menu'>
-                <img id='menu-btn' src={menu} />                
+                <img id='menu-btn' src={menu} />
                 <Menu showMenu={showMenu}>
                     {menuItems.map(li=>
                         <li key={nanoid()} >

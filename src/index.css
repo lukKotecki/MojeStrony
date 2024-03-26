@@ -21,7 +21,6 @@ a{
   margin: 0 auto;
   background-color: white;
   padding: 1em;
-  border: solid yellow;
 }
 
 header{
@@ -91,21 +90,22 @@ header{
     padding: 0 1em;
   }
   header{
-    border: solid red 2px;
     justify-content: space-between;
     align-items: center;
   }
 }
 
 .container{
-  /* min-height: 100%; */
+  min-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: solid 1px purple;
 }
 
 .login{
+  /* height: 90%;
+  display: flex;
+  align-items: center; */
   
 }
 
@@ -119,19 +119,16 @@ footer{
 }
 
 
+.page-wrapper{
+height: 90vh;
+}
+
 
 
 @media (min-width:768px){
   .page-container{
     max-width: 1024px;
   }
-  
-.page-wrapper{
-  /* min-height: 100vh; */
-  height: 100%;
-  background-color: aquamarine;
-  border: solid blue;
-}
   
 }
 

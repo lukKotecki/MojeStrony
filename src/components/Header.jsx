@@ -34,7 +34,7 @@ export default function Header({...rest}){
 
     const menuItems = [
         {name:'home'},
-        {name:'polecane'},
+        {name:'moje'},
         {name:'login'}
     ]
 

@@ -2,7 +2,9 @@ const sites = [
     {
         name: 'JoeMonster.org',
         url: 'https://joemonster.org/',
-        categories: ['art', 'entertainment', 'humor', 'news']
+        categories: ['art', 'entertainment', 'humor', 'news'],
+        add_date: 0,
+        last_modified: 0,
     },
     {
         name: 'Onet',

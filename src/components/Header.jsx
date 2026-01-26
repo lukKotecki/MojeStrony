@@ -32,6 +32,8 @@ export default function Header({...rest}){
         e.target.id==='menu-btn' || e.target.id === 'menu-container' ? 
         setShowMenu(true) : setShowMenu(false) })
 
+    
+
     const menuItems = [
         {name:'home'},
         {name:'moje'},
